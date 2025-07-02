@@ -29,6 +29,11 @@ def main():
     else:
         book_path = sys.argv[1]
 
+    # if the file path doesnt exist it will error out.
+    if not os.path.exists(book_path):
+        print(f"Error: File '{book_path}' not found!")
+        sys.exit(1)
+
     text = get_book_text(book_path)
     num_words = word_count(text)
     raw_char_counts = char_count(text)
