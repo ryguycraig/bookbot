@@ -40,4 +40,5 @@ def main():
     char_counts = sorted_dict(raw_char_counts)
     print_report(book_path, num_words, char_counts)
 
-main()
+if __name__ == "__main__":
+    main()
